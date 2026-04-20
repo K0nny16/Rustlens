@@ -1,0 +1,19 @@
+[database]
+url = "postgres://user:password@localhost:5432/logs_db"
+
+[table]
+name = "application_logs"
+
+[table.columns]
+timestamp = "created_at"
+level = "severity"
+message = "log_message"
+service = "service_name"
+host = "hostname"
+
+[analysis]
+level = "standard"
+
+[output]
+format = "csv"
+path = "reports/log_analysis.csv"
